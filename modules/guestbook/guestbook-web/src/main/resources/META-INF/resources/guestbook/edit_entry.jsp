@@ -1,4 +1,3 @@
-<%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
 <%@ page import="com.liferay.docs.guestbook.model.GuestbookEntry" %>
 <%@ page import="com.liferay.docs.guestbook.service.GuestbookEntryLocalServiceUtil" %>
 <%@ include file="../init.jsp" %>
@@ -22,8 +21,6 @@
 
 <portlet:actionURL name="addEntry" var="addEntryURL" />
 
-
-
 <aui:form action="<%= addEntryURL %>" name="<portlet:namespace />fm">
 
     <aui:model-context bean="<%= entry %>" model="<%= GuestbookEntry.class %>" />
@@ -45,4 +42,3 @@
 
     </aui:button-row>
 </aui:form>
-
