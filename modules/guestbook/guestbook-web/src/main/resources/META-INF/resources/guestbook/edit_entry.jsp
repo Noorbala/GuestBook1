@@ -1,7 +1,10 @@
+<!-- Part 1 : imports -->
 <%@ page import="com.liferay.docs.guestbook.model.GuestbookEntry" %>
 <%@ page import="com.liferay.docs.guestbook.service.GuestbookEntryLocalServiceUtil" %>
+<%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
 <%@ include file="../init.jsp" %>
 
+<!-- Part 2 : scriptlet that determine action is add or edit -->
 <%
 
     long entryId = ParamUtil.getLong(renderRequest, "entryId");
@@ -15,10 +18,12 @@
 
 %>
 
+<!-- Part 3 : link for return  to list page -->
 <portlet:renderURL var="viewURL">
     <portlet:param name="mvcPath" value="/guestbook/view.jsp"></portlet:param>
 </portlet:renderURL>
 
+<!-- Part 4 : form tag -->
 <portlet:actionURL name="addEntry" var="addEntryURL" />
 
 <aui:form action="<%= addEntryURL %>" name="<portlet:namespace />fm">
