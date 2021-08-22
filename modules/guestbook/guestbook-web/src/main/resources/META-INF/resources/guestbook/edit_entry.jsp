@@ -1,7 +1,4 @@
 <!-- Part 1 : imports -->
-<%@ page import="com.liferay.docs.guestbook.model.GuestbookEntry" %>
-<%@ page import="com.liferay.docs.guestbook.service.GuestbookEntryLocalServiceUtil" %>
-<%@ page import="com.liferay.portal.kernel.util.ParamUtil" %>
 <%@ include file="../init.jsp" %>
 
 <!-- Part 2 : scriptlet that determine action is add or edit -->
